@@ -1,0 +1,77 @@
+
+body {
+  background-color:white;
+  padding:15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  margin:0 auto;
+  display: grid;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: repeat(4, 1fr);
+  font-size: 80px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.grid div{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.child1{
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #dae7de;
+  color: #f44607;
+}
+
+.child2{
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #008a69;
+  color: white;
+}
+
+.child3{
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #f44607;
+  color: white;
+}
+
+.child4{
+  display: grid;
+  font-size: 40px;
+  background-color: #f7abc5;
+  color: #f54605;
+}
+
+.child5{
+  display: grid;
+  font-size: 40px;
+  background-color: #5f5fa9;
+  color: white;
+  
+}
+
+.child6{
+  display: grid;
+  font-size: 40px;
+  background-color: #ffc028;
+  color: #f54605;
+  
+}
+
+.child7{
+  display: grid;
+  font-size: 40px;
+  color: white;
+  background-color: #f97374;
+}
+
