@@ -9,7 +9,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, min-content));
   grid-template-rows: repeat(auto-fit, 200px);
   grid-auto-rows: 200px;
-  grid-auto-column: 200px;
+  grid-auto-columns: 200px;
 }
 
 .child:first-child{
@@ -47,17 +47,16 @@ body {
   background-color: #ffc904;
 }
 
-.child:nth-child(8){}
 
 
 
 .changes-container{
   display: grid;
-  grid-template-rows: repeat(auto-fill, 30px);
+  grid-template-rows: repeat(auto-fill, 1fr);
   color: white;
   font-family: 'Trebuchet MS', sans-serif, bold;
   font-size: 25px;
-  padding: 10px;
+  padding: 5px;
 }
 
 
