@@ -1,0 +1,12 @@
+@import "_variables";
+@import "_buttons";
+
+body {
+  background: $bg;
+  @extend %button;
+  
+  a {
+    color: blue;
+    
+  }
+}
