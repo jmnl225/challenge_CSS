@@ -1,0 +1,328 @@
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 60% 32px auto;
+  grid-template-rows: 1fr;
+}
+
+
+/* 왼쪽 */
+.left{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: #f28f3b;
+
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(auto-fit, minmax(max-content, min-content));
+}
+
+
+.box {
+  display: grid;
+  height: 100%;
+  width: 97%;
+
+  grid-template-columns: 30px 70% auto;
+  grid-template-rows: 1fr;
+
+  border-bottom: 2px solid #c8553d;
+  border-left: 2px solid #c8553d;
+  border-right: 2px solid #c8553d;
+
+  margin-inline-start: 10px;
+}
+
+
+.box div{
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #c8553d;
+}
+
+.box div:first-child{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  writing-mode: vertical-rl;
+  
+  text-orientation: mixed;
+  text-align: center;
+  transform: rotate(-180deg);
+  font-weight: bold;
+}
+
+
+.box div:nth-child(2){
+  display: inline;
+  font-size: 90px;
+  border-left: 2px solid #c8553d;
+
+  padding-inline-start: 10px;
+  padding-top:10px;
+}
+
+
+.box div:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  border-left: 2px solid #c8553d;
+}
+
+.box div:last-child span{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box div:last-child span:first-child{
+  height: 50%;
+  font-weight: bold;
+  border-bottom: 2px solid #c8553d;
+}
+
+footer{
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-size: 15px;
+  margin-inline: 15px;
+}
+
+/* hover */
+.box:hover {
+  border: 3px solid white;
+  z-index: 1;
+}
+
+.box:hover .child{
+  color: white;
+}
+
+.box:hover .round{
+  background: white;
+}
+
+/*********왼쪽***********/
+
+
+/*가운데*/
+.center{
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #fad1be 0%,
+    #fad1be 50%,
+    #588b8b 50%,
+    #588b8b 100%
+  );
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.center span:first-child{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  padding-inline-start: 15px;
+}
+
+.center span:last-child{
+  writing-mode: vertical-rl;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  transform: rotate(-180deg);
+  padding-inline-start: 15px;
+}
+
+.flower{
+  margin: auto;
+  padding-bottom: 25px;
+}
+
+/********************/
+
+
+/*오른쪽*/
+.right{
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: #c8553d;
+}
+
+.right-body{
+  display: grid;
+
+  grid-gap: 10px;
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+  margin-top: 20px;
+  
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, minmax(1fr, 150px));
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  
+}
+
+.right-body div{
+  border-top: 1px solid;
+}
+
+.right-body div span {
+  display: inline-block;
+}
+
+.right-body div span:first-child{
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+
+  padding-top: 15px;
+}
+
+.right-body div span:last-child{
+  font-family: Arial, sans-serif;
+  padding-top: 5px;
+}
+/********************/
+
+
+/* 라디오버튼 */
+header {
+  width: 90%;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+}
+
+.container {
+  position: relative;
+  padding-left: 25px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: solid;
+  background-color: transparent;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #00000055;
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: black;
+}
+/********************/
+
+/*작은 사이즈 화면*/
+@media(max-width: 705px) {
+  .grid{
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 32px auto;
+  }
+
+  .center{
+    width: 100%;
+    min-height: 1vh;
+    
+    background: linear-gradient(
+      to right,
+      #fad1be 0%,
+      #fad1be 50%,
+      #588b8b 50%,
+      #588b8b 100%
+    );
+
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .center span:first-child{
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+  }
+
+  .center span:last-child{
+    writing-mode: horizontal-tb;
+    transform: rotate(180deg);
+  }
+
+  .flower{
+    padding-inline-end: 25px;
+  }
+
+  .right{
+    min-height: 100vh;
+    background: #c8553d;
+  }
+
+}
