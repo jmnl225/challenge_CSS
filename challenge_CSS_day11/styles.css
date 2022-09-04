@@ -1,0 +1,322 @@
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background: #90c699; /*2e2828*/
+}
+
+/* 패딩으로 인한 박스 사이즈 최적화 */
+ * , *:before, *:after{ 
+  box-sizing: border-box; 
+}
+
+
+.grid{
+  background-color: #90c699;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  
+  grid-template-columns: 200px 1fr 1fr 1fr;
+  grid-template-rows: 1fr 20%;
+
+  padding: 2px;
+  gap: 2px;
+}
+
+.grid div {
+  background-color: white;
+}
+
+.grid div:first-child {
+  grid-row: span 2;
+  grid-column: 1;
+}
+
+.footer-left {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+footer{
+  grid-row-start: 2;
+  grid-column: 3 / span 2;
+  background: white;
+}
+
+header {
+  padding-top: 10px;
+  padding-inline-start: 10px;
+  font-size: 10px;
+}
+
+/*--------------- services ---------------*/
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.services h2 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 25px;
+  padding-inline-start: 10px;
+  padding-inline-end: 15px;
+  padding-bottom: 15px;
+}
+
+.nav-list{
+  display: grid;
+  width: 100%;
+  grid-template-rows: repeat(auto-fit, auto);
+  grid-template-columns: 1fr;
+  justify-content: start;
+}
+
+.nav-list span {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-inline-start: 20px;
+
+  font-size: 13px;
+  border-top: 1px solid;
+}
+
+.nav-list span:last-child {
+  border-bottom: 1px solid;
+}
+
+.nav-list span:hover{
+  background: #eee;
+}
+
+.services footer {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 12px;
+  padding-bottom: 15px;
+}
+
+.services footer ul h5{
+  font-weight: bold;
+}
+
+.services footer ul{
+  padding-top: 15px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
+
+.services footer ul li span{
+  display: block;
+}
+
+/*--------------- home ---------------*/
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+}
+
+.home nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
+
+.home h1{
+  width: auto;
+  font-weight: medium;
+  font-size: 30px;
+}
+
+.home span {
+  display: block;
+  font-size: 12px;
+  margin-top: 15px;
+  line-height: 18px;
+}
+
+/*--------------- img-section-left ---------------*/
+
+.img-section-left{
+  background-image: url("https://i.pinimg.com/564x/8b/31/cb/8b31cb0ff89b64c3d4470c2c9074ac4c.jpg")
+}
+
+/*--------------- img-section-right ---------------*/
+
+.img-section-right {
+  width: 100%;
+  height: 100%;
+  background-color: #90c699;
+  
+}
+
+.img-section-right nav{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  gird-template-columns: 33% 33% auto;
+  gird-template-rows: 25% 25% 25% 25%;
+  grid-auto-rows: 25%;
+  grid-auto-columns: 33%;
+  background-color: #90c699;
+  gap: 2px;
+  margin-inline-end: 6px;
+}
+
+.img-section-right div {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-section-right div:first-child {
+  grid-column: span 3 ;
+  grid-row: span 2;
+  background-image: url("https://media.koelnmesse.io/spogagafa/redaktionell/spoga-gafa/img/blog/gruenes_buero/02-greenest-office-gdynia-2_m24_full_m36_1025.jpg"); 
+}
+
+.img-section-right div:nth-child(2) {
+  grid-column: span 2 ;
+  grid-row-start: 3;
+  background-image: url("https://i.pinimg.com/564x/1a/82/0c/1a820cbd00f9614031b2efe363b43087.jpg");
+}
+
+
+.img-section-right div:nth-child(3) {
+  grid-column-start: 3;
+  grid-row-start: 3;
+
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  background-color: #90c699;
+
+  padding-inline-end: 4px;
+  padding-bottom: 2px;
+  gap: 2px;
+}
+
+.img-section-right div:nth-child(3) div:first-child {
+     background-image: url("https://i.pinimg.com/236x/72/31/80/723180b2c577094db7e86ea3b54c5ce0.jpg");
+}
+
+.img-section-right div:nth-child(3) div:last-child {
+    background-image: url("https://i.pinimg.com/236x/27/b8/de/27b8de3435105528b9b38013f042db79.jpg");
+}
+
+.img-section-right div:nth-child(4) {
+  grid-column-start: 1 ;
+  grid-row-start: 4;
+  /*
+  background-image: url("https://i.pinimg.com/564x/a8/b4/e5/a8b4e552fd26a9412a7eb2a2f90a4c9d.jpg");*/
+  background-color: orange;
+  margin-bottom: 6px;
+}
+
+.img-section-right div:nth-child(5) {
+  grid-column: 2 / span 2 ;
+  grid-row-start: 4;
+  background-image: url("https://i.pinimg.com/564x/c7/c5/31/c7c531ab9ffe8b7eabd530ab5eb7d863.jpg");
+  margin-bottom: 6px;
+}
+
+
+/*--------------- footer-left ---------------*/
+
+.footer-left nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-left nav h3{
+  display: inline-block;
+  font-weight: medium;
+  font-size: 20px;
+  padding-inline-start: 10px;
+  padding-inline-end: 15px;
+  margin-top: auto;
+}
+
+
+/*--------------- footer ---------------*/
+
+
+.footer {
+  grid-column: span 2;
+  background-color: #90c699;
+}
+
+.footer nav{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+
+  width: 100%;
+  height: 100%;
+}
+
+.footer nav div{
+  border: 1px solid #90c699;
+}
+
+.footer div:first-child{
+  width: 100%;
+  height: 100%;
+  
+  grid-column-start: 1;
+  grid-row: span 2;
+  background-color: purple;
+}
+
+.footer div:nth-child(2){
+  width: 100%;
+  height: 100%;
+  
+  grid-column-start: 2;
+  grid-row-start: 1;
+  background-color: green;
+}
+
+.footer div:nth-child(3){
+  grid-column-start: 2;
+  grid-row-start: 2;
+  background-color: white;
+}
+
+.footer div:nth-child(4){
+  grid-column: 3 / span 4;
+  grid-row: span 2;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("https://www.greendesign.com.au/wp-content/uploads/2018/02/Traditional-Vertical-Garden-20.jpg");
+  }
+
+
+/*--------------- 작은화면 ---------------*/
+@media(max-width: 705px) {
+    .grid{
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(autofit, minmax(1fr, max-content));
+      grid-auto-rows: auto;
+    }
+    
+  }
+
+
+}
